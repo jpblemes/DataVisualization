@@ -13,8 +13,8 @@ function seedData() {
     for (var i = 0; i < MAX_LENGTH; ++i) {
     lineArr.push({
         time: new Date(now.getTime() - ((MAX_LENGTH - i) * duration)),
-        x: 5,
-        y: randomNumberBounds(0, 5),
+        x: 10,
+        y: randomNumberBounds(0, 10),
         z: 0
     });
     }
@@ -25,9 +25,9 @@ function updateData() {
 
     var lineData = {
     time: now,
-    x: 5,
-        y: randomNumberBounds(0, 5),
-        z: 0
+    x: 10,
+    y: randomNumberBounds(0, 10),
+    z: 0
     };
     lineArr.push(lineData);
 
