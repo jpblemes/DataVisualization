@@ -167,3 +167,13 @@ h4{
   padding: 0.2em;
   text-align: justify;
 }
+
+/* Left column */
+.csvLinks{
+  margin: 1em;
+  width: 25%;
+  background-color: #aaa;
+  background-attachment: fixed;
+  padding-right: 20px;
+  text-align: center;
+}

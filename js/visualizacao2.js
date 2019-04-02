@@ -51,3 +51,41 @@ document.addEventListener("DOMContentLoaded", function() {
     d3.select("#chart").datum(lineArr).call(chart);
     d3.select(window).on('resize', resize);
 });
+
+var gsrv = [];
+function NewValue(){
+    return gsrv[clickevent]; 
+}
+//ficheiro começa aqui
+var rowToHtml = function( row ) {
+    var result = "";
+    var x = 1;
+    for (key in row) {
+
+        result += key + ":" + row[key] + "<br/>"
+    }
+    return result;
+}
+
+var previewCsvUrl = function( csvUrl ) {
+d3.timeout=500;
+    d3.csv( csvUrl, function( rows ) {
+        var str = "";
+        var aux = "";
+        for(var i = 0; i < rows.length-1; i++){
+            aux = rowToHtml(rows[i]);
+            str +=   aux;
+            gsrv[i]=aux.substr(-8);
+            var sub1 = gsrv[i];
+            gsrv[i]=gsrv[i].substring(0,3);
+            
+            gsrv[i]=Number(gsrv[i]);
+        }
+    })
+}
+
+function imprime(item){
+    console.log(item);
+}
+
+previewCsvUrl("T1_POX.csv")
