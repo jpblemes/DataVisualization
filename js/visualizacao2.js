@@ -13,9 +13,9 @@ function seedData() {
     for (var i = 0; i < MAX_LENGTH; ++i) {
     lineArr.push({
         time: new Date(now.getTime() - ((MAX_LENGTH - i) * duration)),
-        x: randomNumberBounds(0, 5),
-        y: randomNumberBounds(0, 2.5),
-        z: randomNumberBounds(0, 10)
+        x: 5,
+        y: randomNumberBounds(0, 5),
+        z: 0
     });
     }
 }
@@ -25,9 +25,9 @@ function updateData() {
 
     var lineData = {
     time: now,
-    x: randomNumberBounds(0, 5),
-    y: randomNumberBounds(0, 2.5),
-    z: randomNumberBounds(0, 10)
+    x: 5,
+        y: randomNumberBounds(0, 5),
+        z: 0
     };
     lineArr.push(lineData);
 

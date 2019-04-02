@@ -33,10 +33,11 @@ h3{
 h4{
   font-family: "Open Sans Condensed", "Arial", sans-serif; 
   font-size: 2em;
-  background-color: #333;
+  background-color: #212121;
   color: #f2f2f2;;
   font-weight: bold;
   padding: 0.2em;
+  margin-bottom: 0.3em;
 }
 
 /* Header/Blog Title */
@@ -55,7 +56,7 @@ h4{
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #212121;
 }
 
 /* Style the topnav links */
@@ -99,7 +100,7 @@ h4{
   font-weight: bold;
   color: #f2f2f2;
   overflow: hidden;
-  background-color: #333;
+  background-color: #212121;
   display: block;
   text-align: center;
   padding: 14px 16px;
@@ -137,7 +138,7 @@ h4{
 .footer {
   padding: 20px;
   text-align: center;
-  background: #333;
+  background: #212121;
   margin-top: 20px;
   color: white;
 }
@@ -151,5 +152,18 @@ h4{
   background-color: #ddd;
   color: black;
   font-weight: bold;
-  border: .1em solid #333; 
+  border: .1em solid #212121; 
+}
+
+.darkBackground{
+  background: #212121;
+}
+
+.marginBottom05{
+  margin-bottom: 0.5em;
+}
+
+.bemVindo{
+  padding: 0.2em;
+  text-align: justify;
 }
