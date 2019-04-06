@@ -1,3 +1,21 @@
+var csv = "csvFiles/T1_POX.csv"
+var data = [];
+var idata = 0;
+$.ajax({
+    url: csv,
+    async: false,
+    success: function (csvd) {
+        data = $.csv.toObjects(csvd);
+    },
+    dataType: "text",
+    complete: function () {
+        // call a function on complete 
+    }
+});
+
+function imprime(teste){
+    console.log(teste)
+}
 
 var lineArr = [];
 var MAX_LENGTH = 100;
@@ -8,25 +26,15 @@ function randomNumberBounds(min, max) {
     return Math.floor(Math.random() * max) + min;
 }
 
-function seedData() {
-    var now = new Date();
-    for (var i = 0; i < MAX_LENGTH; ++i) {
-    lineArr.push({
-        time: new Date(now.getTime() - ((MAX_LENGTH - i) * duration)),
-        x: 10,
-        y: randomNumberBounds(0, 10),
-        z: 0
-    });
-    }
-}
+
 
 function updateData() {
+    
     var now = new Date();
-
     var lineData = {
     time: now,
-    x: 10,
-    y: randomNumberBounds(0, 10),
+    x: 700,
+    y: data[idata].POX,
     z: 0
     };
     lineArr.push(lineData);
@@ -35,6 +43,7 @@ function updateData() {
     lineArr.shift();
     }
     d3.select("#chart").datum(lineArr).call(chart);
+    idata++
 }
 
 function resize() {
@@ -45,47 +54,32 @@ function resize() {
     d3.select("#chart").call(chart);
 }
 
+
+function seedData(data) {
+    var now = new Date();
+    for (var i = 0; i < MAX_LENGTH; ++i) {
+        lineArr.push({
+            time: new Date(now.getTime() - ((MAX_LENGTH - i) * duration)),
+            x: 700,
+            y: data[0].POX,
+            z: 0
+        });
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-    seedData();
+    seedData(data);
+    window.setInterval(updateData, 500);
+    d3.select("#chart").datum(lineArr).call(chart);
+    d3.select(window).on('resize', resize);
+});
+document.addEventListener("para", function() {
+    seedData(data);
     window.setInterval(updateData, 500);
     d3.select("#chart").datum(lineArr).call(chart);
     d3.select(window).on('resize', resize);
 });
 
-var gsrv = [];
-function NewValue(){
-    return gsrv[clickevent]; 
-}
-//ficheiro começa aqui
-var rowToHtml = function( row ) {
-    var result = "";
-    var x = 1;
-    for (key in row) {
 
-        result += key + ":" + row[key] + "<br/>"
-    }
-    return result;
-}
 
-var previewCsvUrl = function( csvUrl ) {
-d3.timeout=500;
-    d3.csv( csvUrl, function( rows ) {
-        var str = "";
-        var aux = "";
-        for(var i = 0; i < rows.length-1; i++){
-            aux = rowToHtml(rows[i]);
-            str +=   aux;
-            gsrv[i]=aux.substr(-8);
-            var sub1 = gsrv[i];
-            gsrv[i]=gsrv[i].substring(0,3);
-            
-            gsrv[i]=Number(gsrv[i]);
-        }
-    })
-}
 
-function imprime(item){
-    console.log(item);
-}
-
-previewCsvUrl("T1_POX.csv")
