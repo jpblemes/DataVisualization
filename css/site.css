@@ -14,7 +14,7 @@ body {
 h1{
   font-family: "Open Sans Condensed", "Arial", sans-serif; 
   font-size: 3em;
-  text-shadow: 3px 3px #bbb;
+  text-shadow: 0.05em 0.05em #bbb;
   margin: 0.3em;
 }
 
@@ -42,7 +42,7 @@ h4{
 
 /* Header/Blog Title */
 .header {
-  padding: 30px;
+  padding: 1em;
   text-align: center;
   background: white;
   
@@ -50,7 +50,7 @@ h4{
 
 .header h1 {
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 3em;
 }
 
 /* Style the top navigation bar */
@@ -92,7 +92,29 @@ h4{
   background-size: 20px 20px;
   background-attachment: fixed;
   padding-right: 20px;
+  text-align: left;
+}
+
+.leftcolumn h2{
+  font-weight: bold;
+  color: #212121;
+  overflow: hidden;
+  background-color: white; 
+  display: block;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-bottom: 0.1em;
+}
+.leftcolumn li{
+  font-weight: bold;
+  color: #212121;
+  overflow: hidden;
+  background-color: white; 
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 0.1em;
 }
 
 .leftcolumn a{
@@ -103,9 +125,10 @@ h4{
   background-color: #212121;
   display: block;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1.2em 5em;
   text-decoration: none;
   margin-bottom: 0.1em;
+  border-radius: 0.5em;
 }
 
 .leftcolumn a:hover{
@@ -208,3 +231,37 @@ h4{
   margin: 1em;
   padding: 1em;
 }
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marginLeft1em{
+  margin-left: 1em;
+}
+
+.tooltip-wrapper {
+  position: absolute;
+  visibility: hidden;
+}
+.has-tooltip:hover .tooltip-wrapper {
+  visibility: visible;
+  background-color: #212121;
+  border: dashed #aaa 0.1em;
+  color: #fff;  
+  opacity: 1;
+  padding: 0.4em;
+  border-radius: 0.5em;
+  right: -1.0em;
+	top: 50px;
+  /*top: 30px;*/
+  /*left: 50%;*/
+  /*margin-left: -76px;*/
+  /* z-index: 999; defined above with value of 5 */
+}
+
+.has-tooltip .tooltip-wrapper {
+  opacity: 0;
+  transition: opacity 1.25s;
+}
+

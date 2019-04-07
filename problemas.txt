@@ -20,24 +20,24 @@ Compatibilidade do sistema com o mundo real; consistência e padrões / Links n�
 Sensação de sistema incompleto			
 Média			
 Retirar ou implementar os links devidamente
-Não resolvido
-Sem comentários	
+Resolvido
+Links retirados
 4		
 Página inicial > tag “Visualizações”			
 Consistência e padrões / A palavra “Visualizações” não é redimensionada conforme o tamanho da tela			
 Prejudica a estética da página ao ser redimensionada			
 Baixa			
 Aplicar a responsividade à tag “Visualizações”
-Não resolvido
-Sem comentários	
+Resolvido
+Responsividade aplicada a tag "Visualizações"
 5		
 Páginas POX e GRS			
 Compatibilidade do sistema com o mundo real / Faltou o botão voltar para a página inicial			
 Usuário não tem opção de voltar à página inicial			
 Média			
 Incluir o botão “voltar à página inicial” em cada uma das páginas
-Não resolvido
-Sem comentários	
+Resolvido
+Foi adicionado o botão "Home" na aba de navegação	
 6		
 Gráficos “GRS” e “POX” 			
 Lista de Heuristicas: Visibilidade do status do sistema; Compatibilidade do sistema com o mundo real; Controle do usuário e liberdade; Consistência e padrões; Prevenção de erros; Reconhecimento em lugar de lembrança; Flexibilidade e eficiência de uso; Estética e design minimalista; Ajudar os usuários a reconhecer, diagnosticar e corrigir erros; Ajuda e documentação.			
@@ -57,7 +57,7 @@ Sem comentários
 8		
 Página “GSR”			
 Compatibilidade do sistema com o mundo real / Carregar arquivo fora do formato suportado não gera mensagem de erro			
-Consequência:				
+-				
 Alta			
 Implementar diálogos que informam ao usuário qual é o problema e como resolvê-lo
 Não resolvido
@@ -65,11 +65,11 @@ Sem comentários
 9		
 Sistema completo			
 Consistência e padrões / O título não muda quando se muda a página			
-Consequência:				
+-				
 Baixa			
 Recomendações:	Implementar títulos corretos para cada página
-Não resolvido
-Sem comentários	
+Resolvido
+Foram adicionados os títulos
 10		
 Sistema completo			
 Ajuda e documentação | Falta de um buscador			
