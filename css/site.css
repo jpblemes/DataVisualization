@@ -240,28 +240,46 @@ h4{
   margin-left: 1em;
 }
 
+.has-tooltip {
+  /*position: relative;*/
+  display: inline;
+}
 .tooltip-wrapper {
   position: absolute;
   visibility: hidden;
 }
 .has-tooltip:hover .tooltip-wrapper {
   visibility: visible;
-  background-color: #212121;
-  border: dashed #aaa 0.1em;
-  color: #fff;  
-  opacity: 1;
-  padding: 0.4em;
-  border-radius: 0.5em;
-  right: -1.0em;
-	top: 50px;
-  /*top: 30px;*/
-  /*left: 50%;*/
-  /*margin-left: -76px;*/
-  /* z-index: 999; defined above with value of 5 */
+  opacity: 0.9;
 }
 
-.has-tooltip .tooltip-wrapper {
-  opacity: 0;
-  transition: opacity 1.25s;
+.tooltip {
+  display: block;
+  position: relative;
+  top: -9em;
+  right: -10%;
+  width: 17em;
+  height: 10em;
+  /*margin-left: -76px;*/
+  color: #FFFFFF;
+  background: #000000;
+  padding: 0.7em;
+  text-align: justify;
+  border-radius: 0.5em;
+  box-shadow: 0.1em 0.25em 0.35em white;
 }
+.tooltip:after {
+  content: '';
+  position: absolute;
+  margin-left: 1em;
+  width: 0;
+  height: 0;
+  top: 7em;
+  right: 100%;
+  width: 15em;
+  border-bottom: 0.5em solid transparent;
+  border-top: 0.5em solid transparent;
+  border-right: 0.5em solid #000000;
+}
+
 
