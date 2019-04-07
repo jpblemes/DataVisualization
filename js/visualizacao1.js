@@ -73,7 +73,7 @@ d3.select("body")
     .style("margin", "5px")
 
 // Initialize with csv file from server
-previewCsvUrl("T1_GSR.csv")
+previewCsvUrl("csvFiles/T1_GSR.csv")
 //ficheiro termina aqui
     
 var inter = setInterval(function() {

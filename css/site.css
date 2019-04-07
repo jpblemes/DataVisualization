@@ -167,3 +167,44 @@ h4{
   padding: 0.2em;
   text-align: justify;
 }
+
+/* Left column */
+.csvLinks{
+  margin: 1em;
+  width: 25%;
+  background-color: #aaa;
+  background-attachment: fixed;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.avaliacaoCard{
+  background-color: #212121;
+  color: #f2f2f2;
+  font-size: 1em;
+  text-align: justify;
+  text-indent: 0;
+  line-height: 1.5;
+  margin: 1em;
+  padding: 1em;
+}
+
+.avaliacao-agradecimento{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.avaliacao-center{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #212121;
+  color: #f2f2f2;
+  font-size: 1em;
+  text-align: justify;
+  text-indent: 0;
+  line-height: 1.5;
+  margin: 1em;
+  padding: 1em;
+}
