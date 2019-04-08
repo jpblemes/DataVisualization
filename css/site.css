@@ -16,7 +16,9 @@ h1{
   font-size: 3em;
   text-shadow: 0.05em 0.05em #bbb;
   margin: 0.3em;
+  color: #212121;
 }
+
 
 h2{
   font-family: "Open Sans Condensed", "Arial", sans-serif; 
