@@ -12,7 +12,6 @@ Compatibilidade do sistema com o mundo real / Faltou significado de GSR e POX (t
 Falta de entendimento do conteúdo da página 			
 Alta			
 Incluir tooltip indicando o significado das siglas
-Sem comentários	
 Resolvido
 Foram adicionados tooltips informando o significado das siglas	
 3		
