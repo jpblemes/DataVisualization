@@ -34,15 +34,23 @@
         <li><a href="index.html">Home</a></li>
       </ul>
     </div>
-    <div class="row card ">    
+    
+    <div class="row card ">   
+        
         <div class="card center">
                     
             <p>Gostaria de agradecer a professora Gilda e a turma de Avaliação de Sistemas Interativos pelo feedback neste projeto.</p>
             <p>Deixarei disponível nesta página as sugestões realizadas e o que tem sido feito.</p>
                     
-        </div>              
-        <section class="tabela bordered striped centered highlight responsive-table">
+        </div>            
+        <section id = "tabela1" class="tabela bordered striped centered highlight responsive-table">
             <h2 class="center">Problemas</h3>
+            <div id="botoes-tabela">
+              <span>Filtros:</span>
+              <a id = "botao-todos" class="waves-effect waves-light btn-small darken-4">Todos</a>
+              <a id = "botao-resolvidos" class="waves-effect waves-light btn-small darken-4">Resolvidos</a> 
+              <a id = "botao-nao-resolvidos"class="waves-effect waves-light btn-small darken-4">Não resolvidos</a>
+            </div>  
             <div style="overflow-x:auto;">
                 <table class="centered bordered">
                     <thead>
@@ -53,7 +61,7 @@
                             <th>Consequência</th>
                             <th>Criticidade</th>
                             <th>Recomendações</th>
-                            <th>Status</th>
+                            <th id="tabela-status">Status</th>
                             <th>Comentários</th>
                         </tr>
                     </thead>

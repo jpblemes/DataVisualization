@@ -32,16 +32,30 @@
 
 .tabela {
     border-collapse: separate;
-    border-spacing: .25em;
-    margin: 1em 0;
+    border-spacing: 1em;
+    margin: 1em;
+     
 }
 
 .tabela th {
     font-weight: bold;
     background-color: #212121;
     color: white;
+    padding: 0.25em;
 }
 
 .tabela td {
     background-color: #eee;
+    padding: 0.5em;
 }
+
+#botoes-tabela{
+  margin: 0.5em;
+}
+#botoes-tabela a{
+  margin: 0.5em;
+}
+#botoes-tabela span{
+  font-weight:  bold; 
+}
+
