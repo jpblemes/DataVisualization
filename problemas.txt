@@ -4,16 +4,17 @@ Ajuda e documentação; compatibilidade com o mundo real / Impossível conhecer 
 Falta de entendimento do conteúdo da página			
 Alta			
 Construir uma página com as informações que permita ao usuário conhecer mais sobre o projeto e atribuir o link à esta página
-Não resolvido
-Sem comentários			
+Resolvido
+Foi adicionada uma página com informações do projeto e foi atribuido um link a ela			
 2		
 Página inicial > Menus à esquerda			
 Compatibilidade do sistema com o mundo real / Faltou significado de GSR e POX (termos não familiares)			
 Falta de entendimento do conteúdo da página 			
 Alta			
 Incluir tooltip indicando o significado das siglas
-Não resolvido
 Sem comentários	
+Resolvido
+Foram adicionados tooltips informando o significado das siglas	
 3		
 Página inicial > Links do menu superior e os dois últimos links do menu lateral à esquerda			
 Compatibilidade do sistema com o mundo real; consistência e padrões / Links não descrevem a ação à ser realizada			
@@ -37,7 +38,7 @@ Usuário não tem opção de voltar à página inicial
 Média			
 Incluir o botão “voltar à página inicial” em cada uma das páginas
 Resolvido
-Foi adicionado o botão "Home" na aba de navegação	
+Foi adicionado o botão "Home" para voltar a página inicial na aba de navegação	
 6		
 Gráficos “GRS” e “POX” 			
 Lista de Heuristicas: Visibilidade do status do sistema; Compatibilidade do sistema com o mundo real; Controle do usuário e liberdade; Consistência e padrões; Prevenção de erros; Reconhecimento em lugar de lembrança; Flexibilidade e eficiência de uso; Estética e design minimalista; Ajudar os usuários a reconhecer, diagnosticar e corrigir erros; Ajuda e documentação.			
