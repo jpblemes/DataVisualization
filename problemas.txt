@@ -52,8 +52,8 @@ Consistência e padrões / Não é possível navegar no sistema via teclado
 Acessibilidade/usabilidade prejudicada			
 Alta			
 Implementar a visualização do link na navegação via teclado
-Não resolvido
-Sem comentários	
+Resolvido
+Acessibilidade por teclado está funcionando
 8		
 Página “GSR”			
 Compatibilidade do sistema com o mundo real / Carregar arquivo fora do formato suportado não gera mensagem de erro			

@@ -17,6 +17,7 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/jquery.csv.js"></script>
+    <script src="js/site.js"></script>
     <script src="js/d3.v3.min.js" language="JavaScript"></script>
     <script src="js/d3.v4.min.js"></script>
     <script src="js/timeGraphic.js" language="JavaScript"></script>
@@ -29,6 +30,7 @@
     <div class="topnav">
       <ul>
         <li><a href="AvaliacaoDeSistemasInterativos.html">Avaliação de Sistemas Interativos</a></li>
+        <li><a href="sensores.html">Sensores</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="index.html">Home</a></li>
       </ul>
@@ -51,37 +53,12 @@
       <div class="card">
         <h2>Visualizações</h2>
         <ul>
-          <li>
-            <div class="flex-container">
-                <div class="has-tooltip">
-                    <i class="small material-icons">info</i>
-                    <span class="tooltip-wrapper"><span class="tooltip">
-                    <article>GSR (Galvanic Skin Response) é um circuito que mede a resistência da pele de acordo com o suor liberado. 
-                      Quanto mais as glândulas sudoríparas produzirem, menor será a resistência medida. 
-                      Aumentando a amplitude do sinal de saída do circuito.
-                    </article>
-                  </span></span>
-                </div>
-                <a class = "marginLeft1em" href="gsr.html">GSR</a>
-            </div>
-          </li>
-          <li>
-              <div class="flex-container">
-                <div class="has-tooltip tooltip-pox">
-                  <i class="small material-icons">info</i>
-                  <span class="tooltip-wrapper"><span class="tooltip">
-                  <article>POX (Pulse Oximeter) é um dispositivo que mede taxas de pulso e 
-                    a quantidade de oxigênio no sangue de um indivíduo.
-                  </article>
-                </span></span>
-              </div>
-                  <a class = "marginLeft1em" href="pox.html">POX</a>
-              </div>
-          </li>      
+          <li><a class = "gsr" href="gsr.html" data-position="right" data-tooltip="Galvanic Skin Response">GSR</a></li>
+          <li><a class = "pox" data-position="right" data-tooltip="Pulse Oximeter" href="pox.html">POX</a></li>
         </ul>
       </div>
     </div>
-  </div>    
+  </div>  
   <div class="footer">
     </div>
     
