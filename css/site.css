@@ -135,10 +135,22 @@ h4{
   margin-right: 2em;
 }
 
+.blackButton:focus,
+.blackButton:hover,
 .leftcolumn a:focus,
 .leftcolumn a:hover{
   background-color: #ddd;
   color: black;
+}
+
+.blackButton{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  color: #f2f2f2;
+  text-decoration: none;
+  margin-bottom: 0.1em;
+  border-radius: 0.5em;
+  background-color: #212121;
 }
 
 /* Fake image */
@@ -203,52 +215,13 @@ h4{
   justify-content: center;
   align-items: center;
 }
+
+.flex-container-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /*add 1em left margin*/
 .marginLeft1em{
   margin-left: 1em;
-}
-
-/*tooltips*/
-.has-tooltip {
-  /*position: relative;*/
-  display: inline;
-}
-.tooltip-wrapper {
-  position: absolute;
-  visibility: hidden;
-}
-
-.has-tooltip:focus .tooltip-wrapper,
-.has-tooltip:hover .tooltip-wrapper {
-  visibility: visible;
-  opacity: 0.9;
-}
-
-.tooltip {
-  display: block;
-  position: relative;
-  top: -3em;
-  right: -10%;
-  /*margin-left: -76px;*/
-  color: #FFFFFF;
-  background: #000000;
-  padding: 0.7em;
-  text-align: justify;
-  border-radius: 0.5em;
-  box-shadow: 0.1em 0.25em 0.35em white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.tooltip:after {
-  content: '';
-  position: absolute;
-  margin-left: 1em;
-  width: 0;
-  height: 0;
-  top: 1.3em;
-  right: 100%;
-  width: 15em;
-  border-bottom: 0.5em solid transparent;
-  border-top: 0.5em solid transparent;
-  border-right: 0.5em solid #000000;
 }

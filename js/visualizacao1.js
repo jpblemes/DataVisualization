@@ -45,14 +45,16 @@ d3.timeout=500;
 d3.select("html")
     .style("height","100%")
 
-d3.select(".gsr")
+d3.select(".csvGsr")
     .style("height","100%")
     .style("font", "12px sans-serif")
     
     .append("input")
+    .classed("upload", "true")
     .attr("type", "file")
     .attr("accept", ".csv")
     .style("margin", "5px")
+    
     .on("change", function() {
     var file = d3.event.target.files[0];
         if (file) {
@@ -66,11 +68,6 @@ d3.select(".gsr")
             reader.readAsDataURL(file);
         }
     })
-
-d3.select("body")
-.append("div")
-    .attr("id", "preview")
-    .style("margin", "5px")
 
 // Initialize with csv file from server
 previewCsvUrl("csvFiles/T1_GSR.csv")

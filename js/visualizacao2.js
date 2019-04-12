@@ -33,9 +33,9 @@ function updateData() {
     var now = new Date();
     var lineData = {
     time: now,
-    x: 700,
-    y: data[idata].POX,
-    z: 0
+    csv1: data[idata].POX,
+    csv2: 0,
+    csv3: 0
     };
     lineArr.push(lineData);
 
@@ -60,9 +60,9 @@ function seedData(data) {
     for (var i = 0; i < MAX_LENGTH; ++i) {
         lineArr.push({
             time: new Date(now.getTime() - ((MAX_LENGTH - i) * duration)),
-            x: 700,
-            y: data[0].POX,
-            z: 0
+            csv1: data[0].POX,
+            csv2: 0,
+            csv3: 0
         });
     }
 }
