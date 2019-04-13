@@ -63,9 +63,12 @@ d3.select(".csvGsr")
             reader.onloadend = function(evt) {
                 var dataUrl = evt.target.result;
                 // The following call results in an "Access denied" error in IE.
+                console.log(dataurl);
                 previewCsvUrl(dataUrl);
             };
             reader.readAsDataURL(file);
+        }else{
+            alert("O arquivo deve ser do tipo .csv");
         }
     })
 

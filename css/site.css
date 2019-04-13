@@ -216,12 +216,33 @@ h4{
   align-items: center;
 }
 
+.flex-container-shrink{
+  display: flex;
+  align-items: stretch;
+  background-color: #f1f1f1;
+}
+
 .flex-container-wrap{
   display: flex;
   flex-wrap: wrap;
 }
 
+.flex-container-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container-column-reverse{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+} 
+
 /*add 1em left margin*/
 .marginLeft1em{
   margin-left: 1em;
 }
+

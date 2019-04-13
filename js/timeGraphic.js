@@ -2,7 +2,7 @@ function realTimeLineChart() {
     var margin = {top: 20, right: 20, bottom: 20, left: 20},
         width = 500,
         height = 350,
-        duration = 5000,
+        duration = 1000,
         color = d3.schemeCategory10;
   
     function chart(selection) {

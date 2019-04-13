@@ -13,10 +13,12 @@
 
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/site.css">
+    <link type="text/css" rel="stylesheet" href="css/pox.css">
     <link type="text/css" rel="stylesheet" href="css/d3Style.css">
 
     <script src="js/jquery.js"></script>
     <script src="js/jquery.csv.js"></script>
+    <script src="js/pox.js"></script>
     <script src="js/site.js"></script>
     <script src="js/d3.v3.min.js" language="JavaScript"></script>
     <script src="js/d3.v4.min.js"></script>
@@ -25,7 +27,6 @@
   <body>
     <div class="header">
       <h1>POX</h1>
-      <h3>Pulse Oximeter</h3>
     </div>
     <div class="topnav">
       <ul>
@@ -39,22 +40,36 @@
       <div class="rightcolumn">
         <div class="card v1">
             <div class="flex-container-wrap">
-                <div>
-                    <div id="chart"></div>
-                    <script type="text/javascript" src="js/visualizacao2.js"></script>
-                    <ul>
-                      <li>
-                        <a href="csvFiles/T1_POX.csv" download="T1_POX.csv" class="waves-effect waves-light btn-small">Download csv</a>                      
-                      </li>
-                  </ul>
-                </div>
-                <div>
-
-                </div>
+              <div id="chart" class="flex-container-column-reverse">
+                <div><script type="text/javascript" src="js/visualizacao2.js"></script></div>
+                <div><a href="csvFiles/T1_POX.csv" download="T1_POX.csv" class="waves-effect waves-light btn-small">Download csv</a></div>
               </div>
-          <div>
-              
+              <div>
+                <ul class="flex-container-column poxCsvButtons">
+                  <li>
+                    <span>Inserir arquivo csv 1 </br></span>
+                    <input id="csvPox1" type="file" accept=".csv"/>
+                  </li>
+                  <li>
+                    <span>Inserir arquivo csv 2 </br></span>
+                    <input id="csvPox2" type="file" accept=".csv" />
+                  </li>
+                  <li>
+                    <span>Inserir arquivo csv 3 </br></span>
+                    <input id="csvPox3" type="file" accept=".csv" />
+                  </li>
+                </ul>
+                <div>
+                  
+                </div>
+                <div>
+                  
+                </div>
+                <div>
+                  
+                </div>
             </div>
+          </div>
         </div>
       </div>
       <div class="leftcolumn">

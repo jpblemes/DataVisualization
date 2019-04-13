@@ -80,6 +80,3 @@ document.addEventListener("para", function() {
     d3.select(window).on('resize', resize);
 });
 
-
-
-
