@@ -14,9 +14,11 @@ body {
 h1{
   font-family: "Open Sans Condensed", "Arial", sans-serif; 
   font-size: 3em;
-  text-shadow: 3px 3px #bbb;
+  text-shadow: 0.05em 0.05em #bbb;
   margin: 0.3em;
+  color: #212121;
 }
+
 
 h2{
   font-family: "Open Sans Condensed", "Arial", sans-serif; 
@@ -42,7 +44,7 @@ h4{
 
 /* Header/Blog Title */
 .header {
-  padding: 30px;
+  padding: 1em;
   text-align: center;
   background: white;
   
@@ -50,7 +52,7 @@ h4{
 
 .header h1 {
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 3em;
 }
 
 /* Style the top navigation bar */
@@ -92,9 +94,31 @@ h4{
   background-size: 20px 20px;
   background-attachment: fixed;
   padding-right: 20px;
-  text-align: center;
+  text-align: left;
 }
 
+.leftcolumn h2{
+  font-weight: bold;
+  color: #212121;
+  overflow: hidden;
+  background-color: white; 
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-bottom: 0.1em;
+}
+
+.leftcolumn li{
+  font-weight: bold;
+  color: #212121;
+  overflow: hidden;
+  background-color: white; 
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 0.1em;
+}
 .leftcolumn a{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
@@ -103,14 +127,30 @@ h4{
   background-color: #212121;
   display: block;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1.2em 5em;
   text-decoration: none;
   margin-bottom: 0.1em;
+  border-radius: 0.5em;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
+.blackButton:focus,
+.blackButton:hover,
+.leftcolumn a:focus,
 .leftcolumn a:hover{
   background-color: #ddd;
   color: black;
+}
+
+.blackButton{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  color: #f2f2f2;
+  text-decoration: none;
+  margin-bottom: 0.1em;
+  border-radius: 0.5em;
+  background-color: #212121;
 }
 
 /* Fake image */
@@ -145,7 +185,6 @@ h4{
 
 .v1{
   font-family: sans-serif;
-  font-size: 12px;  
 }
 
 .buttonOnClick a{
@@ -153,14 +192,6 @@ h4{
   color: black;
   font-weight: bold;
   border: .1em solid #212121; 
-}
-
-.darkBackground{
-  background: #212121;
-}
-
-.marginBottom05{
-  margin-bottom: 0.5em;
 }
 
 .bemVindo{
@@ -178,33 +209,40 @@ h4{
   text-align: center;
 }
 
-.avaliacaoCard{
-  background-color: #212121;
-  color: #f2f2f2;
-  font-size: 1em;
-  text-align: justify;
-  text-indent: 0;
-  line-height: 1.5;
-  margin: 1em;
-  padding: 1em;
+/*create flex containers center*/
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.avaliacao-agradecimento{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: bold;
-  font-size: 1.5em;
+.flex-container-shrink{
+  display: flex;
+  align-items: stretch;
+  background-color: #f1f1f1;
 }
 
-.avaliacao-center{
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #212121;
-  color: #f2f2f2;
-  font-size: 1em;
-  text-align: justify;
-  text-indent: 0;
-  line-height: 1.5;
-  margin: 1em;
-  padding: 1em;
+.flex-container-wrap{
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.flex-container-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container-column-reverse{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+} 
+
+/*add 1em left margin*/
+.marginLeft1em{
+  margin-left: 1em;
+}
+
