@@ -46,12 +46,12 @@ jQuery.get('problemas.txt', function(text) {
  });
 
  function insereTabela() {
-    var corpoTabela = $(".tabela").find("tbody");
+    var corpoTabela = $("#tabela1").find("tbody");
 
     var linha = novaLinha();
 
     corpoTabela.append(linha);
-    $(".tabela").slideDown(500);
+    $("#tabela1").slideDown(500);
 
 }
 
@@ -79,3 +79,38 @@ function novaLinha() {
 
     return linha;
 }
+
+resolvido = "Resolvido";
+
+
+$(document).ready(function() {
+    $('#botao-resolvidos').click(()=>{
+        
+        $("td").filter(function() {
+            return $(this).text().indexOf("") !== -1;
+        }).parent().hide();
+
+        $("td").filter(function() {
+            return $(this).text().indexOf("Resolvido") !== -1;
+        }).parent().show();
+          
+    });
+
+    $('#botao-nao-resolvidos').click(()=>{
+        
+        $("td").filter(function() {
+            return $(this).text().indexOf("") !== -1;
+        }).parent().hide();
+
+        $("td").filter(function() {
+            return $(this).text().indexOf("Não resolvido") !== -1;
+        }).parent().show();
+          
+    });
+    $('#botao-todos').click(()=>{
+        
+        $("td").filter(function() {
+            return $(this).text().indexOf("") !== -1;
+        }).parent().show();
+    });
+  });

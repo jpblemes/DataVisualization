@@ -1,14 +1,14 @@
 function realTimeLineChart() {
     var margin = {top: 20, right: 20, bottom: 20, left: 20},
-        width = 600,
-        height = 400,
-        duration = 500,
+        width = 500,
+        height = 350,
+        duration = 1000,
         color = d3.schemeCategory10;
   
     function chart(selection) {
       // Based on https://bl.ocks.org/mbostock/3884955
       selection.each(function(data) {
-        data = ["x", "y", "z"].map(function(c) {
+        data = ["csv1", "csv2", "csv3"].map(function(c) {
           return {
             label: c,
             values: data.map(function(d) {
@@ -59,7 +59,7 @@ function realTimeLineChart() {
           .attr("class", "legend")
           .attr("transform", "translate(" + (width-margin.right-margin.left-75) + ",25)");
         legendEnter.append("rect")
-          .attr("width", 50)
+          .attr("width", 20)
           .attr("height", 75)
           .attr("fill", "#ffffff")
           .attr("fill-opacity", 0.7);
@@ -102,7 +102,7 @@ function realTimeLineChart() {
         g.selectAll("g .legend text")
           .data(data)
           .text(function(d) {
-            return d.label.toUpperCase() + ": " + d.values[d.values.length-1].value;
+            return d.label + ": " + d.values[d.values.length-1].value;
           });
   
         // For transitions https://bl.ocks.org/mbostock/1642874
