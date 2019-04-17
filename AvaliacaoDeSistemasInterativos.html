@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Avaliação de Sistemas Interativos</title>
+    <link rel="shortcut icon" href="img/v-icon.png">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -12,8 +13,8 @@
     
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+    <link type="text/css" rel="stylesheet" href="css/avaliacao.css">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
@@ -29,39 +30,47 @@
     <div class="topnav">
       <ul>
         <li><a href="AvaliacaoDeSistemasInterativos.html">Avaliação de Sistemas Interativos</a></li>
+        <li><a href="sensores.html">Sensores</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="index.html">Home</a></li>
       </ul>
     </div>
-    <div class="row card ">    
+    
+    <div class="row card ">   
+        
         <div class="card center">
                     
             <p>Gostaria de agradecer a professora Gilda e a turma de Avaliação de Sistemas Interativos pelo feedback neste projeto.</p>
             <p>Deixarei disponível nesta página as sugestões realizadas e o que tem sido feito.</p>
                     
-        </div>              
-        <section class="tabela bordered striped centered highlight responsive-table">
+        </div>            
+        <section id = "tabela1" class="tabela bordered striped centered highlight responsive-table">
             <h2 class="center">Problemas</h3>
-            <table class="centered bordered">
-                <thead>
-                    <tr>
-                        <th>Problema</th>
-                        <th>Local do Problema</th>
-                        <th>Heurística / Problema</th>
-                        <th>Consequência</th>
-                        <th>Criticidade</th>
-                        <th>Recomendações</th>
-                        <th>Status</th>
-                        <th>Comentários</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <div id="botoes-tabela">
+              <span>Filtros:</span>
+              <a id = "botao-todos" class="waves-effect waves-light btn-small darken-4">Todos</a>
+              <a id = "botao-resolvidos" class="waves-effect waves-light btn-small darken-4">Resolvidos</a> 
+              <a id = "botao-nao-resolvidos"class="waves-effect waves-light btn-small darken-4">Não resolvidos</a>
+            </div>  
+            <div style="overflow-x:auto;">
+                <table class="centered bordered">
+                    <thead>
+                        <tr>
+                            <th>Problema</th>
+                            <th>Local do Problema</th>
+                            <th>Heurística / Problema</th>
+                            <th>Consequência</th>
+                            <th>Criticidade</th>
+                            <th>Recomendações</th>
+                            <th id="tabela-status">Status</th>
+                            <th>Comentários</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </section>
-        </div>
-        </div>
-      </div>
     </div>
     <div class="footer">
     </div>

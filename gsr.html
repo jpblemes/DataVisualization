@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Dados da Bengala Enativa Afetiva</title>
+    <title>GSR</title>
+    <link rel="shortcut icon" href="img/v-icon.png">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -12,8 +13,6 @@
     
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 
     <script src="js/d3.v3.min.js" language="JavaScript"></script>
     <script src="js/liquidFillGauge.js" language="JavaScript"></script>
@@ -22,12 +21,12 @@
   </head>
   <body>
     <div class="header">
-      <h1>Visualização de Dados</h1>
-      <h3>Bengala Enativa Afetiva</h3>
+      <h1>GSR</h1>
     </div>
     <div class="topnav">
       <ul>
         <li><a href="AvaliacaoDeSistemasInterativos.html">Avaliação de Sistemas Interativos</a></li>
+        <li><a href="sensores.html">Sensores</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="index.html">Home</a></li>
       </ul>
@@ -35,34 +34,39 @@
     <div class="row">
       <div class="rightcolumn">
         <div class="card v1">
-          <h4>GSR - Galvanic Skin Response</h4>
-          <ul class="gsr">    
+          <ul>   
             <li><p>Selecionar arquivo csv para visualização.</p></li>
+            <li class="csvGsr"></li>
           </ul>
           <svg id="fillgauge1" width="15%" height="70%"></svg> 
-          <script type="text/javascript" src="js/visualizacao1.js"></script>
           <div>
             <ul>
               <li>
-                <a href="T1_GSR.csv" download="T1_GSR.csv" class="waves-effect waves-light btn-small darken-4">Download csv</a>                      
+                <a href="csvFiles/T1_GSR.csv" download="T1_GSR.csv" class="waves-effect waves-light btn-small">Download csv</a>                      
               </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="leftcolumn">
-        <div class="card">
-          <h2>Visualizações</h2>
-          <ul >
-            <li class = "buttonOnClick"><a href="gsr.html">GSR</a></li>
-            <li><a href="pox.html">POX</a></li>
-            
-          </ul>
-        </div>
+      <div class="card">
+        <h2>Visualizações</h2>
+        <ul>
+          <li><a class = "gsr" href="gsr.html" data-position="right" data-tooltip="Galvanic Skin Response">GSR</a></li>
+          <li><a class = "pox" data-position="right" data-tooltip="Pulse Oximeter" href="pox.html">POX</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer">
-    </div>
+  </div>
+  <div class="footer">
+  </div>
+  <script src="js/jquery.js"></script>
+  <script src="js/visualizacao1.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/jquery.csv.js"></script>
+  <script src="js/d3.v3.min.js"></script>
+  <script src="js/liquidFillGauge.js"></script>  
+  <script src="visualizacao1.js"></script> 
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
