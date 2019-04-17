@@ -95,9 +95,7 @@ $(document).ready(function() {
         }).parent().show();
           
     });
-  });
 
-  $(document).ready(function() {
     $('#botao-nao-resolvidos').click(()=>{
         
         $("td").filter(function() {
@@ -109,9 +107,6 @@ $(document).ready(function() {
         }).parent().show();
           
     });
-  });
-
-  $(document).ready(function() {
     $('#botao-todos').click(()=>{
         
         $("td").filter(function() {
@@ -119,4 +114,3 @@ $(document).ready(function() {
         }).parent().show();
     });
   });
-
