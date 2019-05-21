@@ -1,8 +1,12 @@
 $(document).ready(function(){
-    $('.gsr').tooltip();
+    $('.v1').tooltip();
 });
 
 $(document).ready(function(){
-    $('.pox').tooltip();
+    $('.v2').tooltip();
+});
+      
+$(document).ready(function(){
+    $('.v3').tooltip();
 });
       

@@ -178,6 +178,7 @@ h4{
 
 /* Add a card effect for articles */
 .card {
+  font-family: sans-serif;
   background-color: white;
   padding: 20px;
   margin-top: 20px;
@@ -197,10 +198,6 @@ h4{
   background: #212121;
   margin-top: 20px;
   color: white;
-}
-
-.v1{
-  font-family: sans-serif;
 }
 
 .buttonOnClick a{
@@ -260,5 +257,9 @@ h4{
 /*add 1em left margin*/
 .marginLeft1em{
   margin-left: 1em;
+}
+
+.marginTop{
+  margin-top: 0.5em;
 }
 

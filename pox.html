@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>POX</title>
+    <title>Gráfico de linhas</title>
     <link rel="shortcut icon" href="img/v-icon.png">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,11 +26,10 @@
   </head>
   <body>
     <div class="header">
-      <h1>POX</h1>
+      <h1>Gráfico de linhas</h1>
     </div>
     <div class="topnav">
       <ul>
-        <li><a href="AvaliacaoDeSistemasInterativos.html">Avaliação de Sistemas Interativos</a></li>
         <li><a href="sensores.html">Sensores</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="index.html">Home</a></li>
@@ -38,12 +37,20 @@
     </div>
     <div class="row">
       <div class="rightcolumn">
-        <div class="card v1">
+        <div class="card">
             <div class="flex-container-wrap">
               <div id="chart" class="flex-container-column-reverse">
-                <div><script type="text/javascript" src="js/visualizacao2.js"></script></div>
-                <div><a href="csvFiles/T1_POX.csv" download="T1_POX.csv" class="waves-effect waves-light btn-small">Download csv</a></div>
-                <span>Caso deseje baixar o .csv da visualização padrão, clique no link abaixo.</br></span>
+                <div>
+                  <script type="text/javascript" src="js/visualizacao2.js"></script>
+                </div>
+                <div class="marginTop">
+                  <a href="csvFiles/T1_POX.csv" download="T1_POX.csv" class="waves-effect waves-light btn-small">Download csv</a>
+                </div>
+                <span class="marginTop">Caso deseje baixar o .csv da visualização padrão, clique no link abaixo.</br></span>
+                <div class="marginTop">
+                    <a id="buttonRestartPox" class="waves-effect waves-light btn-small"><i class="material-icons left">replay</i>Restart</a>
+                </div>
+                
               </div>
               <div>
                 <ul class="flex-container-column poxCsvButtons">
@@ -77,8 +84,10 @@
       <div class="card">
         <h2>Visualizações</h2>
         <ul>
-          <li><a class = "gsr" href="gsr.html" data-position="right" data-tooltip="Galvanic Skin Response">GSR</a></li>
-          <li><a class = "pox" data-position="right" data-tooltip="Pulse Oximeter" href="pox.html">POX</a></li>
+          <li><a class="v1" href="zoomGraph.html" data-position="right" data-tooltip="">V1</a></li>
+          <li><a class="v2" href="pox.html" data-position="right" data-tooltip="Gráfico de linhas para arquivos csv">V2</a></li>
+          <li><a class="v3" href="timeGraph.html" data-position="right" data-tooltip="Gráfico de barras para arquivo csv único">V3</a></li>
+          <li><a class="v4" href="gsr.html" data-position="right" data-tooltip="">V4</a></li>
         </ul>
       </div>
     </div>
