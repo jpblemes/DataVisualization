@@ -1,8 +1,8 @@
 var csvObject = {
-    indice: 0,
-    data: 0,
-    horario: 0,
-    POX: 0
+    id: 0,
+    date: 0,
+    time: 0,
+    DATA: 0
 }
 var csv = "csvFiles/T1_POX.csv"
 var csvPox1 = new Array(csvObject);
@@ -19,7 +19,7 @@ function getValue(numCsv){
     if(numCsv == 1){
         if(setCsv1 == 1){
             idata1++;
-            return csvPox1[idata1-1].POX;
+            return csvPox1[idata1-1].DATA;
         }  
         else
             return 0;
@@ -27,7 +27,7 @@ function getValue(numCsv){
     if(numCsv == 2){
         if(setCsv2 == 1){
             idata2++;
-            return csvPox2[idata2-1].POX;
+            return csvPox2[idata2-1].DATA;
         }  
         else
             return 0;
@@ -35,7 +35,7 @@ function getValue(numCsv){
     if(numCsv == 3){
         if(setCsv3 == 1){
             idata3++;
-            return csvPox3[idata3-1].POX;
+            return csvPox3[idata3-1].DATA;
         }  
         else
             return 0;
@@ -55,19 +55,6 @@ $.ajax({
         // call a function on complete 
     }
 });
-
-// var formdata = new FormData($("form[name='nome_do_form']")[0]);
-// var link = "form/insert";
-//     $.ajax({
-//         type: 'POST',
-//         url: link,
-//         data: formdata ,
-//         processData: false,
-//         contentType: false
-
-//     }).done(function (data) {
-//         $("div.container-fluid").html(data);
-//     });
 
 $(document).ready(function() {    
 
@@ -192,6 +179,27 @@ $(document).ready(function() {
     }
 });
 
+$(document).ready(function() {  
+    $("#buttonRestartPox").click(function(){
+        idata1 = 0;
+        idata2 = 0;
+        idata3 = 0;
+        var save1 = setCsv1;
+        var save2 = setCsv2;
+        var save3 = setCsv3;
+        setCsv1 = 0;
+        setCsv2 = 0;
+        setCsv3 = 0;
+        setTimeout(function(){
+    		setCsv1 = save1;
+            setCsv2 = save2;
+            setCsv3 = save3;
+    	},2000);
+         
+    });
+});
+
+
 var lineArr = [];
 var MAX_LENGTH = 100;
 var duration = 500;
@@ -251,4 +259,3 @@ document.addEventListener("para", function() {
     d3.select("#chart").datum(lineArr).call(chart);
     d3.select(window).on('resize', resize);
 });
-

@@ -143,6 +143,22 @@ h4{
   color: black;
 }
 
+.whiteButton{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 0.1em;
+  border-radius: 0.5em;
+  background-color: white;
+}
+
+.whiteButton:focus,
+.whiteButton:hover{
+  color: #ddd;
+  background-color: #212121;
+}
+
 .blackButton{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
@@ -162,6 +178,7 @@ h4{
 
 /* Add a card effect for articles */
 .card {
+  font-family: sans-serif;
   background-color: white;
   padding: 20px;
   margin-top: 20px;
@@ -181,10 +198,6 @@ h4{
   background: #212121;
   margin-top: 20px;
   color: white;
-}
-
-.v1{
-  font-family: sans-serif;
 }
 
 .buttonOnClick a{
@@ -244,5 +257,9 @@ h4{
 /*add 1em left margin*/
 .marginLeft1em{
   margin-left: 1em;
+}
+
+.marginTop{
+  margin-top: 0.5em;
 }
 
