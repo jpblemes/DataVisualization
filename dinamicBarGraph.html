@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>POX</title>
+    <title>Gráfico de barras</title>
     <link rel="shortcut icon" href="img/v-icon.png">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -10,6 +10,8 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/site.css">
@@ -21,13 +23,13 @@
     <script src="js/jquery.csv.js"></script>
     <script src="js/pox.js"></script>
     <script src="js/site.js"></script>
-    <script src="js/d3.v3.min.js" language="JavaScript"></script>
+    <script src="js/d3.v3.min.js"></script>
     <script src="js/d3.v4.min.js"></script>
-    <script src="js/timeGraphic.js" language="JavaScript"></script>
+    <script src="js/timeGraphic.js"></script>
   </head>
   <body>
     <div class="header">
-      <h1>Gráfico</h1>
+      <h1>Gráfico de barras</h1>
     </div>
     <div class="topnav">
       <ul>
@@ -38,7 +40,7 @@
     </div>
     <div class="row">
       <div class="rightcolumn">
-        <div class="card v1">
+        <div class="card">
             <div class="flex-container-wrap">
                 <div id="viewDiv"></div>
                 <div>
@@ -56,9 +58,12 @@
       <div class="card">
         <h2>Visualizações</h2>
         <ul>
-          <li><a class = "gsr" href="gsr.html" data-position="right" data-tooltip="Galvanic Skin Response">GSR</a></li>
-          <li><a class = "pox" data-position="right" data-tooltip="Pulse Oximeter" href="pox.html">POX</a></li>
-        </ul>
+            <li><a class="toolTipOn" href="zoomGraph.html" data-position="right" data-tooltip="Gráfico de linhas estático para arquivo csv único"><i class="fas fa-chart-line fa-3x" aria-hidden="true"></i></a></li>
+            <li><a class="toolTipOn" href="dinamicBarGraph.html" data-position="right" data-tooltip="Gráfico de barras dinâmico para arquivo csv único"><i class="fas fa-chart-bar fa-3x" aria-hidden="true"></i></a></li>
+            <li><a class="toolTipOn" href="dinamicLineGraph.html" data-position="right" data-tooltip="Gráfico de linhas para arquivos csv"><i class="fas fa-random fa-3x" aria-hidden="true"></i></a></li>
+            <li><a class="toolTipOn" href="#" data-position="right" data-tooltip="Gráfico de área estático para arquivo csv único"><i class="fas fa-chart-area fa-3x" aria-hidden="true"></i></a></li>
+            <li><a class="toolTipOn" href="liquidFill.html" data-position="right" data-tooltip="Visualização de gauge para arquivo csv único"><i class="fas fa-fill fa-3x" aria-hidden="true"></i></a></li>
+          </ul>
       </div>
     </div>
   </div>  

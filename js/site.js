@@ -1,12 +1,6 @@
 $(document).ready(function(){
-    $('.v1').tooltip();
+    $('.toolTipOn').tooltip();
 });
 
-$(document).ready(function(){
-    $('.v2').tooltip();
-});
-      
-$(document).ready(function(){
-    $('.v3').tooltip();
-});
+
       
