@@ -258,4 +258,8 @@ document.addEventListener("para", function() {
     window.setInterval(updateData, 500);
     d3.select("#chart").datum(lineArr).call(chart);
     d3.select(window).on('resize', resize);
+<<<<<<< HEAD:js/visualizacao2.js
 });
+=======
+});
+>>>>>>> master:js/timeLineGraphicCsv.js
