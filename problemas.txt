@@ -1,0 +1,80 @@
+﻿1				
+Página inicial > Link “BENGALA ENATIVA AFETIVA”			
+Ajuda e documentação; compatibilidade com o mundo real / Impossível conhecer mais sobre o projeto			
+Falta de entendimento do conteúdo da página			
+Alta			
+Construir uma página com as informações que permita ao usuário conhecer mais sobre o projeto e atribuir o link à esta página
+Resolvido
+Foi adicionada uma página com informações do projeto e foi atribuido um link a ela			
+2		
+Página inicial > Menus à esquerda			
+Compatibilidade do sistema com o mundo real / Faltou significado de GSR e POX (termos não familiares)			
+Falta de entendimento do conteúdo da página 			
+Alta			
+Incluir tooltip indicando o significado das siglas
+Resolvido
+Foram adicionados tooltips informando o significado das siglas	
+3		
+Página inicial > Links do menu superior e os dois últimos links do menu lateral à esquerda			
+Compatibilidade do sistema com o mundo real; consistência e padrões / Links não descrevem a ação à ser realizada			
+Sensação de sistema incompleto			
+Média			
+Retirar ou implementar os links devidamente
+Resolvido
+Links retirados
+4		
+Página inicial > tag “Visualizações”			
+Consistência e padrões / A palavra “Visualizações” não é redimensionada conforme o tamanho da tela			
+Prejudica a estética da página ao ser redimensionada			
+Baixa			
+Aplicar a responsividade à tag “Visualizações”
+Resolvido
+Responsividade aplicada a tag "Visualizações"
+5		
+Páginas POX e GRS			
+Compatibilidade do sistema com o mundo real / Faltou o botão voltar para a página inicial			
+Usuário não tem opção de voltar à página inicial			
+Média			
+Incluir o botão “voltar à página inicial” em cada uma das páginas
+Resolvido
+Foi adicionado o botão "Home" para voltar a página inicial na aba de navegação	
+6		
+Gráficos “GRS” e “POX” 			
+Lista de Heuristicas: Visibilidade do status do sistema; Compatibilidade do sistema com o mundo real; Controle do usuário e liberdade; Consistência e padrões; Prevenção de erros; Reconhecimento em lugar de lembrança; Flexibilidade e eficiência de uso; Estética e design minimalista; Ajudar os usuários a reconhecer, diagnosticar e corrigir erros; Ajuda e documentação.			
+Não entendimento do significado dos gráficos 			
+Média			
+Incluir identificação dos parâmetros dos gráficos
+Não resolvido
+Sem comentários			
+7		
+Sistema completo			
+Consistência e padrões / Não é possível navegar no sistema via teclado			
+Acessibilidade/usabilidade prejudicada			
+Alta			
+Implementar a visualização do link na navegação via teclado
+Resolvido
+Acessibilidade por teclado está funcionando
+8		
+Página “GSR”			
+Compatibilidade do sistema com o mundo real / Carregar arquivo fora do formato suportado não gera mensagem de erro			
+-				
+Alta			
+Implementar diálogos que informam ao usuário qual é o problema e como resolvê-lo
+Não resolvido
+Sem comentários	
+9		
+Sistema completo			
+Consistência e padrões / O título não muda quando se muda a página			
+-				
+Baixa			
+Recomendações:	Implementar títulos corretos para cada página
+Resolvido
+Foram adicionados os títulos
+10		
+Sistema completo			
+Ajuda e documentação | Falta de um buscador			
+Usuário não consegue obter informações sobre a página 			
+Média 			
+Incluir opção de ajuda e documentação
+Não resolvido
+Sem comentários	
