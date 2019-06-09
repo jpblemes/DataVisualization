@@ -259,3 +259,4 @@ document.addEventListener("para", function() {
     d3.select("#chart").datum(lineArr).call(chart);
     d3.select(window).on('resize', resize);
 });
+////
