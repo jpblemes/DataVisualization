@@ -238,6 +238,12 @@ h4{
   padding: 1em;
 }
 
+.visualizationBorder{ 
+  border: .1em solid #212121; 
+  margin: 1em;
+  padding: 1em;
+}
+
 .darkBackground{
   background-color: #212121; 
 }
