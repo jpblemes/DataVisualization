@@ -27,7 +27,6 @@
     </div>
     <div class="topnav">
       <ul>
-        <li><a href="sensores.html">Sensores</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="index.html">Home</a></li>
       </ul>
@@ -35,6 +34,14 @@
     <div class="row">
       <div class="rightcolumn">
         <div class="card">
+            <div class="infoBorder">
+                <article>Visualização para os sensores POX e GSR.</article>
+                <article>Seus valores podem variar de 0 a 1024.</article>
+                <article>Caso deseja saber mais sobre os sensores 
+                    <a href="sobre.html"><span >clique aqui</span></a>.
+                </article>
+                
+              </div>
           <ul>   
             <li><p>Selecionar arquivo csv para visualização.</p></li>
             <li class="csvGsr"></li>
@@ -43,7 +50,11 @@
           <div>
             <ul>
               <li>
-                <a href="csvFiles/T1_GSR.csv" download="T1_GSR.csv" class="waves-effect waves-light btn-small">Download csv</a>                      
+                  <span> Caso deseje baixar o .csv da visualização padrão, clique no link abaixo.></span>
+                <div class="marginTopBottom">
+                    <a href="csvFiles/T1_GSR.csv" download="T1_GSR.csv" class="waves-effect waves-light btn-small darkBackground">Download csv</a>                      
+                </div>
+                  
               </li>
             </ul>
           </div>
@@ -51,7 +62,7 @@
       </div>
       <div class="leftcolumn">
       <div class="card">
-        <h2>Visualizações</h2>
+        
         <ul>
             <li><a class="toolTipOn" href="zoomGraph.html" data-position="right" data-tooltip="Gráfico de linhas estático para arquivo csv único"><i class="fas fa-chart-line fa-3x" aria-hidden="true"></i></a></li>
             <li><a class="toolTipOn" href="dinamicBarGraph.html" data-position="right" data-tooltip="Gráfico de barras dinâmico para arquivo csv único"><i class="fas fa-chart-bar fa-3x" aria-hidden="true"></i></a></li>
