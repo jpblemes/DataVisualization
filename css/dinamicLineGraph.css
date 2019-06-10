@@ -1,0 +1,11 @@
+.csvButtons li{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+#chart {
+    max-width: 600px;
+    max-height: 400px;
+}
