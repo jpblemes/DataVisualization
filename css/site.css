@@ -246,8 +246,14 @@ h4{
   margin-left: 1em;
 }
 
+.marginTopBottom{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 .marginTop{
   margin-top: 0.5em;
+  
 }
 
 .infoBorder{
@@ -255,4 +261,14 @@ h4{
   border: .1em solid #212121; 
   margin: 1em;
   padding: 1em;
+}
+
+.darkBackground{
+  background-color: #212121; 
+}
+
+.darkBackground:hover,
+.darkBackground:focus{
+  background-color: #ddd;
+  color: black;
 }

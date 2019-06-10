@@ -1,15 +1,40 @@
 /*pagina sobre*/
 .sobre{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-align: justify;
-    
   }
 
 .container-sobre {
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding: 2em;
     text-indent: 2em;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+article{
+  margin: 0.5em;
+}
+
+.tituloMargin{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+a{
+  color: green; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: darkblue;
+  background-color: transparent;
+  text-decoration: underline;
 }
