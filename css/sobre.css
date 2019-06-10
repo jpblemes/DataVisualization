@@ -26,15 +26,4 @@ article{
   margin-bottom: 2em;
 }
 
-a{
-  color: green; 
-  background-color: transparent; 
-  text-decoration: none;
-}
 
-a:focus,
-a:hover {
-  color: darkblue;
-  background-color: transparent;
-  text-decoration: underline;
-}

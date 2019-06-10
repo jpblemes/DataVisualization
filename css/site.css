@@ -224,8 +224,8 @@ h4{
 }
 
 .marginTopBottom{
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .marginTop{
   margin-top: 0.5em;
@@ -246,4 +246,17 @@ h4{
 .darkBackground:focus{
   background-color: #ddd;
   color: black;
+}
+
+a{
+  color: green; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: darkblue;
+  background-color: transparent;
+  text-decoration: underline;
 }
