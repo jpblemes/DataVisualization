@@ -123,9 +123,9 @@ var data = d3.range(300).map(function(d, i, arr) {
 
 // create the real time chart
 var chart = realTimeChart()
-    .title("Gráfico do arquivo .csv")
-    .yTitle("Y Scale")
-    .xTitle("X Scale")
+    .title("")
+    .yTitle("Valores de POX/GSR")
+    .xTitle("Tempo")
     .border(true)
     .width(600)
     .height(290)
