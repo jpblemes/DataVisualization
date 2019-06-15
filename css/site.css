@@ -239,9 +239,22 @@ h4{
 }
 
 .visualizationBorder{ 
-  border: .1em solid #212121; 
-  margin: 1em;
-  padding: 1em;
+  border: .05em solid #212121; 
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+article a{
+  color: green; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+article a:focus,
+article a:hover{
+  color: darkblue;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 .darkBackground{
@@ -254,19 +267,19 @@ h4{
   color: black;
 }
 
-a{
-  color: green; 
-  background-color: transparent; 
-  text-decoration: none;
-}
-
-a:focus,
-a:hover {
-  color: darkblue;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
 .widthBar{
   min-width: 635px;
+}
+
+.csvButtons li{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: .05em solid #212121; 
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.csvButtons li:hover,
+.csvButtons li:focus{
+  background-color: antiquewhite;
 }

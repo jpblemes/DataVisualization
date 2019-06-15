@@ -1,3 +1,5 @@
+var csv = "csvFiles/test.csv"
+
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height"),
@@ -28,10 +30,17 @@ svg.append("g")
     .attr("transform", "translate(" + margin.left + ",0)")
     .call(d3.axisLeft(y).ticks(null, "%"));
 
-d3.json("faithful.json", function(error, faithful) {
-  if (error) throw error;
+//d3.json("faithful.json", function(error, faithful) {
 
-  var n = faithful.length,
+d3.csv(csv,
+
+  // When reading the csv, I must format variables:
+  function(d){
+    return { id : d.id, date : d.date, time : d3.timeParse("%H:%M:%S")(d.time), DATA : d.DATA }
+  },  
+  
+  function(data) {
+  var n = data.length,
       bins = d3.histogram().domain(x.domain()).thresholds(25)(faithful),
       density = kernelDensityEstimator(kernelEpanechnikov(1), x.ticks(25))(faithful);
 

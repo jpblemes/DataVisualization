@@ -1,7 +1,86 @@
+var csvObject = {
+  indice: 0,
+  data: 0,
+  horario: 0,
+  DATA: 0
+}
+var csv = "csvFiles/test.csv"
+var csvData1 = new Array(csvObject);
+var setCsv1 = 1;
+var idata1 = 0;
+
+function getValue(numCsv){
+  if(numCsv == 1){
+      if(setCsv1 == 1){
+          idata1++;
+          return csvData1[idata1-1].DATA;
+      }  
+      else
+          return 0;
+  }
+}
+
+$.ajax({
+  url: csv,
+  async: false,
+  success: function (csvd) {
+      csvData1 = $.csv.toObjects(csvd);
+      setCsv1 = 1;
+  },
+  dataType: "text",
+  complete: function () {
+      // call a function on complete 
+  }
+});
+
+$(document).ready(function() {    
+
+  // The event listener for the file upload
+  document.getElementById('csvData1').addEventListener('change', upload, false);
+  
+  // Method that checks that the browser supports the HTML5 File API
+  function browserSupportFileUpload() {
+      var isCompatible = false;
+      if (window.File && window.FileReader && window.FileList && window.Blob) {
+      isCompatible = true;
+      }
+      return isCompatible;
+  }
+
+  // Method that reads and processes the selected file
+  function upload(evt) {
+  if (!browserSupportFileUpload()) {
+      alert('Este API não é completamente compatível com este navegador!');
+      } else {
+          var data = null;
+          var file = evt.target.files[0];
+          var reader = new FileReader();
+          reader.readAsText(file);
+          reader.onload = function(event) {
+              var csvData = event.target.result;
+              data = $.csv.toObjects(csvData);
+              if (data && data.length > 0) {
+                csvData1 = data;
+                setCsv1 = 1;
+                
+              } else {
+                  alert('Sem dados para importar!');
+              }
+          };
+          reader.onerror = function() {
+              alert('Não foi possível ler ' + file.fileName);
+          };
+      }
+  }
+});
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 30, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 400 - margin.left - margin.right,
+    height = 240 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -13,7 +92,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("csvFiles/T1_POX.csv",
+d3.csv(csv,
 
   // When reading the csv, I must format variables:
   function(d){
@@ -33,7 +112,8 @@ d3.csv("csvFiles/T1_POX.csv",
 
     // Add Y axis
     var y = d3.scaleLinear()
-      .domain([0, d3.max(data, function(d) { return +d.DATA; })])
+      .domain([0, 1100])
+      //.domain([0, d3.max(data, function(d) { return +d.DATA; })]) a linha de cima era assim
       .range([ height, 0 ]);
     yAxis = svg.append("g")
       .call(d3.axisLeft(y));
@@ -119,3 +199,7 @@ d3.csv("csvFiles/T1_POX.csv",
     });
 
 })
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+

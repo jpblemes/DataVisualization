@@ -127,8 +127,8 @@ var chart = realTimeChart()
     .yTitle("Valores de POX/GSR")
     .xTitle("Tempo")
     .border(true)
-    .width(600)
-    .height(290)
+    .width(450)
+    .height(250)
     .barWidth(1)
     .initialData(data);
 

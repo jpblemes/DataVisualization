@@ -24,7 +24,7 @@
     
     <script src="js/kernelDensityEstimation.js"></script>
   </head>
-  <body>
+  <body class="widthBar">
     <div class="header">
       <h1>Visualização de preenchimento</h1>
     </div>
@@ -38,28 +38,39 @@
       <div class="rightcolumn">
         <div class="card">
             <div class="infoBorder">
-                <article>Visualização para os sensores POX e GSR.</article>
+                <article>Gráfico para os sensores POX e GSR.</article>
                 <article>Seus valores podem variar de 0 a 1024.</article>
                 <article>Caso deseja saber mais sobre os sensores 
                     <a href="sobre.html"><span >clique aqui</span></a>.
                 </article>
+                <br>
+                <br>
+                <ul>
+                  <li><i class="fas fa-info-circle"></i> Até 3 arquivos podem ser incluidos.</li>
+                </ul> 
+              </div>
+            <div class="flex-container-wrap">
+              <div>
+                <div class="flex-container-wrap"></div>
+                <svg width="400" height="300"></svg>
+                <div class="marginTopBottom center">
+                    <a id="buttonRestartPox" class="waves-effect waves-light btn-small darkBackground"><i class="material-icons left">replay</i>Restart</a>
+                </div>
+                <span class="">Caso deseje baixar o .csv da visualização padrão, clique no link abaixo.</br></span>
+                <div class="marginTopBottom center">
+                    <a href="csvFiles/T1_POX.csv" download="T1_POX.csv" class="waves-effect waves-light btn-small darkBackground">Download csv</a>
+                </div>
                 
               </div>
-          <ul>   
-            <li><p>Selecionar arquivo csv para visualização.</p></li>
-            <li class="csvGsr"></li>
-          </ul>
-          <svg width="400" height="300"></svg>
-          <div>
-            <ul>
-              <li>
-                  <span> Caso deseje baixar o .csv da visualização padrão, clique no link abaixo.></span>
-                <div class="marginTopBottom">
-                    <a href="csvFiles/T1_GSR.csv" download="T1_GSR.csv" class="waves-effect waves-light btn-small darkBackground">Download csv</a>                      
-                </div>
-                  
-              </li>
-            </ul>
+              <div>
+                <ul class="flex-container-column csvButtons">
+                  <li>
+                    <span>Inserir arquivo csv 1 </br></span>
+                    <input id="csvPox1" type="file" accept=".csv"/>
+                  </li>
+                </ul>
+                
+            </div>
           </div>
         </div>
       </div>
@@ -70,7 +81,7 @@
             <li><a class="toolTipOn" href="zoomGraph.html" data-position="right" data-tooltip="Gráfico de linhas estático para arquivo csv único"><i class="fas fa-chart-line fa-3x" aria-hidden="true"></i></a></li>
             <li><a class="toolTipOn" href="dinamicBarGraph.html" data-position="right" data-tooltip="Gráfico de barras dinâmico para arquivo csv único"><i class="fas fa-chart-bar fa-3x" aria-hidden="true"></i></a></li>
             <li><a class="toolTipOn" href="dinamicLineGraph.html" data-position="right" data-tooltip="Gráfico de linhas para arquivos csv"><i class="fas fa-random fa-3x" aria-hidden="true"></i></a></li>
-            <li><a class="toolTipOn" href="#" data-position="right" data-tooltip="Gráfico de área estático para arquivo csv único"><i class="fas fa-chart-area fa-3x" aria-hidden="true"></i></a></li>
+            <li><a class="toolTipOn" href="kernelDensityEstimation.html" data-position="right" data-tooltip="Gráfico de área estático para arquivo csv único"><i class="fas fa-chart-area fa-3x" aria-hidden="true"></i></a></li>
             <li><a class="toolTipOn" href="liquidFill.html" data-position="right" data-tooltip="Visualização de gauge para arquivo csv único"><i class="fas fa-fill fa-3x" aria-hidden="true"></i></a></li>
           </ul>
       </div>

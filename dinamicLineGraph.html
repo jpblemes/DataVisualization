@@ -21,7 +21,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/site.js"></script>
   </head>
-  <body>
+  <body class="widthBar">
     <div class="header">
       <h1>Gráfico de linhas</h1>
     </div>
@@ -48,7 +48,10 @@
               </div>
             <div class="flex-container-wrap">
               <div>
-                <div id="chart" class="flex-container-wrap"></div>
+                <div class="visualizationBorder">
+                  <div id="chart" class="flex-container-wrap"></div>
+                </div>
+                
                 <div class="marginTopBottom center">
                     <a id="buttonRestartPox" class="waves-effect waves-light btn-small darkBackground"><i class="material-icons left">replay</i>Restart</a>
                 </div>
@@ -58,9 +61,6 @@
                 </div>
                 
               </div>
-              
-                
-              
               <div>
                 <ul class="flex-container-column csvButtons">
                   <li>
@@ -76,15 +76,7 @@
                     <input id="csvPox3" type="file" accept=".csv" />
                   </li>
                 </ul>
-                <div>
-                  
-                </div>
-                <div>
-                  
-                </div>
-                <div>
-                  
-                </div>
+                
             </div>
           </div>
         </div>

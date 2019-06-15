@@ -21,7 +21,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/site.js"></script>
   </head>
-  <body>
+  <body class="widthBar">
     <div class="header">
       <h1>Gráfico com zoom</h1>
     </div>
@@ -50,22 +50,22 @@
            
             <div class="flex-container-wrap">
                 <div>
-                    <div id="my_dataviz"></div>
+                    <div class="visualizationBorder">
+                      <div id="my_dataviz"></div>
+                    </div>
                     <div class="marginTop center ">
                         <span class="marginTop">Caso deseje baixar o .csv da visualização padrão, clique no link abaixo.</br></span>
-                        <a href="csvFiles/T1_POX.csv" download="T1_POX.csv" class="waves-effect waves-light btn-small darkBackground">Download csv</a>
+                        <a href="csvFiles/test.csv" download="test.csv" class="waves-effect waves-light btn-small darkBackground">Download csv</a>
                     </div>
                 </div>
-                
-                
-                <div>
-                  <ul class="flex-container-column CsvButtons">
+                <div class="flex-container-column csvButtons">
+                  <ul>
                     <li>
                       <span>Inserir arquivo csv 1 </br></span>
-                      <input id="csvPox1" type="file" accept=".csv"/>
+                      <input id="csvData1" type="file" accept=".csv"/>
                     </li>
-                </ul>
-              </div>
+                  </ul> 
+                </div>
           </div>
         </div>
       </div>

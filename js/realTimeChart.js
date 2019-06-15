@@ -9,7 +9,7 @@ function realTimeChart() {
       margin = { top: 20, bottom: 20, left: 50, right: 30, topNav: 10, bottomNav: 20 },
       dimension = { chartTitle: 20, xAxis: 20, yAxis: 20, xTitle: 20, yTitle: 20, navChart: 70 },
       barWidth = 3,
-      maxY = 1000, minY = 0,
+      maxY = 1200, minY = 0,
       chartTitle, yTitle, xTitle,
       drawXAxis = true, drawYAxis = true, drawNavChart = true,
       border,

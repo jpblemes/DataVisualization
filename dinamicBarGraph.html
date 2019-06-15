@@ -21,13 +21,10 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/jquery.csv.js"></script>
-    <script src="js/pox.js"></script>
-    <script src="js/site.js"></script>
     <script src="js/d3.v3.min.js"></script>
     <script src="js/d3.v4.min.js"></script>
-    <script src="js/timeGraphic.js"></script>
   </head>
-  <body>
+  <body class="widthBar">
     <div class="header">
       <h1>Gráfico de barras</h1>
     </div>
@@ -52,17 +49,32 @@
                   <li><i class="fas fa-info-circle"></i> Clique e arraste na barra inferior para ajustar a área de análise.</li>
                 </ul> 
               </div>
-            <div class="flex-container-wrap">
-                <div id="viewDiv"></div>
+              <div class="flex-container-wrap">
                 <div>
-                  <ul class="flex-container-column CsvButtons">
+                    <div class="visualizationBorder">
+                      <div id="viewDiv"></div>                  
+                   </div>
+                    <div>
+                      <div class="marginTopBottom center">
+                        <a id="buttonRestartPox" class="waves-effect waves-light btn-small darkBackground"><i class="material-icons left">replay</i>Restart</a>
+                      </div>
+                      <span class="">Caso deseje baixar o .csv da visualização padrão, clique no link abaixo.</br></span>
+                      <div class="marginTopBottom center">
+                          <a href="csvFiles/T1_POX.csv" download="T1_POX.csv" class="waves-effect waves-light btn-small darkBackground">Download csv</a>  
+                      </div>
+                    </div>
+                </div>
+                
+                
+                <div class="flex-container-column csvButtons">
+                  <ul>
                     <li>
                       <span>Inserir arquivo csv 1 </br></span>
-                      <input id="csvPox1" type="file" accept=".csv"/>
+                      <input id="csvData1" type="file" accept=".csv"/>
                     </li>
-                </ul>
+                  </ul>  
+                </div>
               </div>
-          </div>
         </div>
       </div>
       <div class="leftcolumn">
@@ -82,7 +94,8 @@
     </div>
     
     <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/site.js"></script>
     <script src="js/d3.v3.min.js"></script>
     <script src="js/realTimeChart.js"></script>
     <script src="js/dinamicBarGraph.js"></script>
