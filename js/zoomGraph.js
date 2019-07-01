@@ -78,7 +78,7 @@ $(document).ready(function() {
 /////////////////////////////////////////////////////////////////////////
 
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 30, left: 60},
+var margin = {top: 10, right: 30, bottom: 40, left: 60},
     width = 400 - margin.left - margin.right,
     height = 240 - margin.top - margin.bottom;
 
@@ -90,6 +90,7 @@ var svg = d3.select("#my_dataviz")
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
+          
 
 //Read the data
 d3.csv(csv,
@@ -110,6 +111,16 @@ d3.csv(csv,
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x));
 
+      xAxis = svg.append("text")
+      .attr("transform",
+            "translate(" + (width/2) + " ," + 
+                           (height + margin.top + 20) + ")")
+      .style("text-anchor", "middle")
+      .style("font-size", "12px") 
+      .text("Tempo");
+      
+        
+        
     // Add Y axis
     var y = d3.scaleLinear()
       .domain([0, 1100])
@@ -126,6 +137,7 @@ d3.csv(csv,
         .attr("height", height )
         .attr("x", 0)
         .attr("y", 0);
+        
 
     // Add brushing
     var brush = d3.brushX()                   // Add the brush feature using the d3.brush function
@@ -183,6 +195,13 @@ d3.csv(csv,
             .x(function(d) { return x(d.time) })
             .y(function(d) { return y(d.DATA) })
           )
+          xAxis = svg.append("text")
+          .attr("transform",
+              "translate(" + (width/2) + " ," + 
+                           (height + margin.top + 20) + ")")
+          .style("text-anchor", "middle")
+          .style("font-size", "12px") 
+          .text("Tempo");
     }
 
     // If user double click, reinitialize the chart
@@ -195,7 +214,16 @@ d3.csv(csv,
         .attr("d", d3.line()
           .x(function(d) { return x(d.time) })
           .y(function(d) { return y(d.DATA) })
+        
+          
       )
+      xAxis = svg.append("text")
+      .attr("transform",
+            "translate(" + (width/2) + " ," + 
+                           (height + margin.top + 20) + ")")
+      .style("text-anchor", "middle")
+      .style("font-size", "12px") 
+      .text("Tempo");
     });
 
 })

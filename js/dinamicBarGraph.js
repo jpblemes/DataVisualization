@@ -124,7 +124,7 @@ var data = d3.range(300).map(function(d, i, arr) {
 // create the real time chart
 var chart = realTimeChart()
     .title("")
-    .yTitle("Valores de POX/GSR")
+    .yTitle("")
     .xTitle("Tempo")
     .border(true)
     .width(450)

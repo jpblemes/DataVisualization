@@ -6,7 +6,7 @@ function realTimeChart() {
       datum, initialData, data,
       maxSeconds = 300, pixelsPerSecond = 10,
       svgWidth = 700, svgHeight = 300,
-      margin = { top: 20, bottom: 20, left: 50, right: 30, topNav: 10, bottomNav: 20 },
+      margin = { top: 20, bottom: 20, left: 50, right: 30, topNav: 10, bottomNav: 40 },
       dimension = { chartTitle: 20, xAxis: 20, yAxis: 20, xTitle: 20, yTitle: 20, navChart: 70 },
       barWidth = 3,
       maxY = 1200, minY = 0,

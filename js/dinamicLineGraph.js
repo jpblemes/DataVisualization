@@ -1,6 +1,6 @@
 function realTimeLineChart() {
-    var margin = {top: 20, right: 20, bottom: 20, left: 20},
-        width = 390,
+    var margin = {top: 20, right: 20, bottom: 50, left: 20},
+        width = 490,
         height = 280,
         duration = 1000,
         color = d3.schemeCategory10;
@@ -68,12 +68,14 @@ function realTimeLineChart() {
           .append("text")
             .attr("y", function(d, i) { return (i*20) + 25; })
             .attr("x", 5)
-            .attr("fill", function(d) { return z(d.label); });
-  
+            .attr("fill", function(d) { return z(d.label); })
+            
+            
         var svg = selection.select("svg");
         svg.attr('width', width).attr('height', height);
+        var margingraph = margin.left + 20;
         var g = svg.select("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+          .attr("transform", "translate(" + margingraph + "," + margin.top + ")");
   
         g.select("g.axis.x")
           .attr("transform", "translate(0," + (height-margin.bottom-margin.top) + ")")
@@ -98,12 +100,21 @@ function realTimeLineChart() {
           .duration(duration)
           .ease(d3.easeLinear)
           .on("start", tick);
-  
+       
+
         g.selectAll("g .legend text")
           .data(data)
           .text(function(d) {
             return d.label + ": " + d.values[d.values.length-1].value;
           });
+
+          svg.append("svg:text")
+          .attr("class", "title")
+        .attr("x", 220)
+        .attr("y", 265)
+        .style("font-size", "12px") 
+        .text("Tempo");
+         
   
         // For transitions https://bl.ocks.org/mbostock/1642874
         function tick() {
