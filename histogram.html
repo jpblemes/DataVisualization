@@ -35,38 +35,45 @@
                     <a href="sobre.html"><span >clique aqui</span></a>.
                 </article>
               </div>
-            <div class="flex-container-wrap">
-              <div>
-                <div class="flex-container-wrap"></div>
-                <div id="my_dataviz"></div>
-                <span class="">Caso deseje baixar o .csv da visualização padrão, clique no link abaixo.</br></span>
-                <div class="marginTopBottom center">
-                    <a href="csvFiles/T1_POX.csv" download="T1_POX.csv" class="waves-effect waves-light btn-small darkBackground">Download csv</a>
+              <div class="flex-container-wrap">
+                <div class="visualizationBorder">
+                  <div>
+                    <div id="my_dataviz"></div>
+                    <form action="#">
+                      <p class="range-field">
+                        <label>Faixa de valores (0-100): </label>
+                        <input id="nBin" value = "20" type="range" min="1" max="100" />
+                      </p>
+                    </form>
+                  </div>
                 </div>
                 
+                  <div>
+                      <ul class="flex-container-column csvButtons">
+                        <li>
+                          <span>Inserir arquivo csv 1 </br></span>
+                          <input id="csvPox1" type="file" accept=".csv"/>
+                        </li>
+                      </ul>
+                  </div>
+                  <div>
+                      <span class="">Caso deseje baixar o .csv da visualização padrão, clique no link abaixo.</br></span>
+                      <div class="marginTopBottom center">
+                          <a href="csvFiles/T1_POX.csv" download="T1_POX.csv" class="waves-effect waves-light btn-small darkBackground">Download csv</a>
+                      </div>
+                    </div>
               </div>
-              <div>
-                <ul class="flex-container-column csvButtons">
-                  <li>
-                    <span>Inserir arquivo csv 1 </br></span>
-                    <input id="csvPox1" type="file" accept=".csv"/>
-                  </li>
-                </ul>
-                
-            </div>
-          </div>
         </div>
       </div>
       <div class="leftcolumn">
       <div class="card">
-        
         <ul>
-            <li><a class="toolTipOn" href="zoomGraph.html" data-position="right" data-tooltip="Gráfico de linhas estático para arquivo csv único"><i class="fas fa-chart-line fa-3x" aria-hidden="true"></i></a></li>
-            <li><a class="toolTipOn" href="dinamicBarGraph.html" data-position="right" data-tooltip="Gráfico de barras dinâmico para arquivo csv único"><i class="fas fa-chart-bar fa-3x" aria-hidden="true"></i></a></li>
-            <li><a class="toolTipOn" href="dinamicLineGraph.html" data-position="right" data-tooltip="Gráfico de linhas para arquivos csv"><i class="fas fa-random fa-3x" aria-hidden="true"></i></a></li>
-            <li><a class="toolTipOn" href="histogram.html" data-position="right" data-tooltip="Gráfico de área estático para arquivo csv único"><i class="fas fa-chart-area fa-3x" aria-hidden="true"></i></a></li>
-            <li><a class="toolTipOn" href="liquidFill.html" data-position="right" data-tooltip="Visualização de gauge para arquivo csv único"><i class="fas fa-fill fa-3x" aria-hidden="true"></i></a></li>
-          </ul>
+          <li><a class="toolTipOn" href="zoomGraph.html" data-position="right" data-tooltip="Gráfico de linhas estático para arquivo csv único"><i class="fas fa-chart-line fa-3x" aria-hidden="true"></i></a></li>
+          <li><a class="toolTipOn" href="dinamicBarGraph.html" data-position="right" data-tooltip="Gráfico de barras dinâmico para arquivo csv único"><i class="fas fa-chart-bar fa-3x" aria-hidden="true"></i></a></li>
+          <li><a class="toolTipOn" href="dinamicLineGraph.html" data-position="right" data-tooltip="Gráfico de linhas para arquivos csv"><i class="fas fa-random fa-3x" aria-hidden="true"></i></a></li>
+          <li><a class="toolTipOn" href="histogram.html" data-position="right" data-tooltip="Histograma de arquivo csv único"><i class="fas fa-hospital-symbol fa-3x" aria-hidden="true"></i></a></li>
+          <li><a class="toolTipOn" href="liquidFill.html" data-position="right" data-tooltip="Visualização de gauge para arquivo csv único"><i class="fas fa-fill fa-3x" aria-hidden="true"></i></a></li>
+        </ul>
       </div>
     </div>
   </div>
