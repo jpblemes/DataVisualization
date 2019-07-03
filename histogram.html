@@ -15,18 +15,10 @@
     
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/site.css">
-    <link type="text/css" rel="stylesheet" href="css/kernelDensityEstimation.css">
-
-    <script src="js/d3.v3.min.js"></script>
-    <script src="js/d3.v4.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.csv.js"></script>
-    
-    <script src="js/kernelDensityEstimation.js"></script>
   </head>
   <body class="widthBar">
     <div class="header">
-      <h1>Visualização de preenchimento</h1>
+      <h1>Histograma</h1>
     </div>
     <div class="topnav">
       <ul>
@@ -38,24 +30,15 @@
       <div class="rightcolumn">
         <div class="card">
             <div class="infoBorder">
-                <article>Gráfico para os sensores POX e GSR.</article>
-                <article>Seus valores podem variar de 0 a 1024.</article>
+                <article>Histograma para os sensores POX e GSR.</article>
                 <article>Caso deseja saber mais sobre os sensores 
                     <a href="sobre.html"><span >clique aqui</span></a>.
                 </article>
-                <br>
-                <br>
-                <ul>
-                  <li><i class="fas fa-info-circle"></i> Até 3 arquivos podem ser incluidos.</li>
-                </ul> 
               </div>
             <div class="flex-container-wrap">
               <div>
                 <div class="flex-container-wrap"></div>
-                <svg width="400" height="300"></svg>
-                <div class="marginTopBottom center">
-                    <a id="buttonRestartPox" class="waves-effect waves-light btn-small darkBackground"><i class="material-icons left">replay</i>Restart</a>
-                </div>
+                <div id="my_dataviz"></div>
                 <span class="">Caso deseje baixar o .csv da visualização padrão, clique no link abaixo.</br></span>
                 <div class="marginTopBottom center">
                     <a href="csvFiles/T1_POX.csv" download="T1_POX.csv" class="waves-effect waves-light btn-small darkBackground">Download csv</a>
@@ -81,7 +64,7 @@
             <li><a class="toolTipOn" href="zoomGraph.html" data-position="right" data-tooltip="Gráfico de linhas estático para arquivo csv único"><i class="fas fa-chart-line fa-3x" aria-hidden="true"></i></a></li>
             <li><a class="toolTipOn" href="dinamicBarGraph.html" data-position="right" data-tooltip="Gráfico de barras dinâmico para arquivo csv único"><i class="fas fa-chart-bar fa-3x" aria-hidden="true"></i></a></li>
             <li><a class="toolTipOn" href="dinamicLineGraph.html" data-position="right" data-tooltip="Gráfico de linhas para arquivos csv"><i class="fas fa-random fa-3x" aria-hidden="true"></i></a></li>
-            <li><a class="toolTipOn" href="kernelDensityEstimation.html" data-position="right" data-tooltip="Gráfico de área estático para arquivo csv único"><i class="fas fa-chart-area fa-3x" aria-hidden="true"></i></a></li>
+            <li><a class="toolTipOn" href="histogram.html" data-position="right" data-tooltip="Gráfico de área estático para arquivo csv único"><i class="fas fa-chart-area fa-3x" aria-hidden="true"></i></a></li>
             <li><a class="toolTipOn" href="liquidFill.html" data-position="right" data-tooltip="Visualização de gauge para arquivo csv único"><i class="fas fa-fill fa-3x" aria-hidden="true"></i></a></li>
           </ul>
       </div>
@@ -90,10 +73,11 @@
   <div class="footer">
   </div>
   <script src="js/jquery.js"></script>
-  
+  <script src="js/d3.v3.min.js"></script>
+  <script src="js/d3.v4.min.js"></script>
+  <script src="js/histogram.js"></script>
   <script src="js/site.js"></script>
   <script src="js/jquery.csv.js"></script>
-  <script src="js/kernelDensityEstimation.js"></script>
   <!--JavaScript at end of body for optimized loading-->
   <script src="js/materialize.min.js"></script>
   
