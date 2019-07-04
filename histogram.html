@@ -31,6 +31,7 @@
         <div class="card">
             <div class="infoBorder">
                 <article>Histograma para os sensores POX e GSR.</article>
+                <article>Seus valores podem variar de 0 a 1024.</article>
                 <article>Caso deseja saber mais sobre os sensores 
                     <a href="sobre.html"><span >clique aqui</span></a>.
                 </article>
@@ -41,7 +42,7 @@
                     <div id="my_dataviz"></div>
                     <form action="#">
                       <p class="range-field">
-                        <label>Faixa de valores (0-100): </label>
+                        <label>Faixa de valores (1-100): <span id="valorDaFaixa">20</span></label>
                         <input id="nBin" value = "20" type="range" min="1" max="100" />
                       </p>
                     </form>

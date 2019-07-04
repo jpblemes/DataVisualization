@@ -67,7 +67,7 @@ d3.csv(csv, function(dataCsv) {
         .duration(1000)
           .attr("x", 1)
           .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
-          .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+          .attr("width", function(d) { return x(d.x1) - x(d.x0) -1; })
           .attr("height", function(d) { return height - y(d.length); })
           .style("fill", "#69b3a2")
 
@@ -87,23 +87,10 @@ d3.csv(csv, function(dataCsv) {
   // Listen to the button -> update if user change it
   d3.select("#nBin").on("input", function() {
     update(+this.value);
+    var faixaAtual = $("#nBin").val();
+    $("#valorDaFaixa").text(faixaAtual);
   });
 
 });
 
 ///////////////////////////////////////////////////////////////
-
-var slider = document.getElementById('test-slider');
-  noUiSlider.create(slider, {
-   start: [20, 80],
-   connect: true,
-   step: 1,
-   orientation: 'horizontal', // 'horizontal' or 'vertical'
-   range: {
-     'min': 0,
-     'max': 100
-   },
-   format: wNumb({
-     decimals: 0
-   })
-  });
