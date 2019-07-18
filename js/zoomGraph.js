@@ -186,6 +186,7 @@ d3.csv(csv,
       }
 
       // Update axis and line position
+      //console.log(x);
       xAxis.transition().duration(1000).call(d3.axisBottom(x))
       line
           .select('.line')

@@ -1,6 +1,6 @@
 csv = "csvFiles/T1_POX.csv";
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 30, left: 40},
+var margin = {top: 10, right: 30, bottom: 30, left: 60},
     width = 400 - margin.left - margin.right,
     height = 300 - margin.top - margin.bottom;
 
@@ -29,7 +29,6 @@ d3.csv(csv, function(dataCsv) {
   svg.append("g")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x));
-
   // Y axis: initialization
   var y = d3.scaleLinear()
       .range([height, 0]);
@@ -53,7 +52,13 @@ d3.csv(csv, function(dataCsv) {
         .transition()
         .duration(1000)
         .call(d3.axisLeft(y));
-
+        svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Frequência");   
     // Join the rect with the bins data
     var u = svg.selectAll("rect")
         .data(bins)
