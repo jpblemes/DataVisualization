@@ -1,6 +1,6 @@
 function realTimeLineChart() {
     var margin = {top: 20, right: 20, bottom: 50, left: 20},
-        width = 490,
+        width = 400,
         height = 280,
         duration = 1000,
         color = d3.schemeCategory10;
